@@ -7,7 +7,7 @@
 
 <h3>Building scalable web solutions &amp; automating the mundane.</h3>
 
-[![Portfolio](https://img.shields.io/badge/raphael.bleier.uk-0d1117?style=for-the-badge&logo=safari&logoColor=38bdf8)](https://raphael.bleier.uk)&nbsp;[![Email](https://img.shields.io/badge/contact%40bleier.uk-0d1117?style=for-the-badge&logo=gmail&logoColor=38bdf8)](mailto:contact@bleier.uk)
+[![Portfolio](https://img.shields.io/badge/raphael.bleier.uk-0d1117?style=for-the-badge&logo=safari&logoColor=38bdf8)](https://raphael.bleier.uk)&nbsp;[![Email](https://img.shields.io/badge/contact%40bleier.uk-0d1117?style=for-the-badge&logo=gmail&logoColor=38bdf8)](mailto:raphaelbl@edu.aau.at)
 
 </div>
 
