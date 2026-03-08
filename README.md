@@ -1,13 +1,10 @@
 <div align="center">
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,100:38bdf8&height=130&section=header&text=Raphael%20Bleier&fontSize=40&fontColor=ffffff&fontAlignY=50&animation=fadeIn">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,100:38bdf8&height=130&section=header&text=Raphael%20Bleier&fontSize=40&fontColor=ffffff&fontAlignY=50&animation=fadeIn" width="100%" alt="Header" />
-</picture>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,100:38bdf8&height=130&section=header&text=Raphael%20Bleier&fontSize=40&fontColor=ffffff&fontAlignY=50" width="100%" alt="Header" />
 
 <h3>Building scalable web solutions &amp; automating the mundane.</h3>
 
-[![Portfolio](https://img.shields.io/badge/raphael.bleier.uk-0d1117?style=for-the-badge&logo=safari&logoColor=38bdf8)](https://raphael.bleier.uk)&nbsp;[![Email](https://img.shields.io/badge/contact%40bleier.uk-0d1117?style=for-the-badge&logo=gmail&logoColor=38bdf8)](mailto:raphaelbl@edu.aau.at)
+[![Portfolio](https://img.shields.io/badge/raphael.bleier.uk-0d1117?style=for-the-badge&logo=safari&logoColor=38bdf8)](https://raphael.bleier.uk)&nbsp;[![Email](https://img.shields.io/badge/contact%40bleier.uk-0d1117?style=for-the-badge&logo=gmail&logoColor=38bdf8)](raphael.bleier@bleier.uk)
 
 </div>
 
@@ -98,33 +95,17 @@ web apps, automation tools, browser extensions, and IoT projects.
 
 ### `$ ls ./projects`
 
-<div align="center">
-
-<a href="https://github.com/raphaelbleier/SpotifyToWled">
-  <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=raphaelbleier&repo=SpotifyToWled&bg_color=0d1117&border_color=30363d&title_color=38bdf8&icon_color=38bdf8&text_color=a1a1aa" />
-</a>
-&nbsp;
-<a href="https://github.com/raphaelbleier/geminibrowserextension">
-  <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=raphaelbleier&repo=geminibrowserextension&bg_color=0d1117&border_color=30363d&title_color=38bdf8&icon_color=38bdf8&text_color=a1a1aa" />
-</a>
-
-<br/><br/>
-
-<a href="https://github.com/raphaelbleier/aau_smartgreenhouse">
-  <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=raphaelbleier&repo=aau_smartgreenhouse&bg_color=0d1117&border_color=30363d&title_color=38bdf8&icon_color=38bdf8&text_color=a1a1aa" />
-</a>
-&nbsp;
-<a href="https://github.com/raphaelbleier/SE2Einzelphase">
-  <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=raphaelbleier&repo=SE2Einzelphase&bg_color=0d1117&border_color=30363d&title_color=38bdf8&icon_color=38bdf8&text_color=a1a1aa" />
-</a>
-
-<br/><br/>
-
-<a href="https://github.com/raphaelbleier/Local-Media-Wish-Management-App-React-Node">
-  <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=raphaelbleier&repo=Local-Media-Wish-Management-App-React-Node&bg_color=0d1117&border_color=30363d&title_color=38bdf8&icon_color=38bdf8&text_color=a1a1aa" />
-</a>
-
-</div>
+<p align="center">
+  <a href="https://github.com/raphaelbleier/SpotifyToWled"><img src="https://github-readme-stats.vercel.app/api/pin/?username=raphaelbleier&repo=SpotifyToWled&bg_color=0d1117&border_color=30363d&title_color=38bdf8&icon_color=38bdf8&text_color=a1a1aa" /></a>
+  <a href="https://github.com/raphaelbleier/geminibrowserextension"><img src="https://github-readme-stats.vercel.app/api/pin/?username=raphaelbleier&repo=geminibrowserextension&bg_color=0d1117&border_color=30363d&title_color=38bdf8&icon_color=38bdf8&text_color=a1a1aa" /></a>
+</p>
+<p align="center">
+  <a href="https://github.com/raphaelbleier/aau_smartgreenhouse"><img src="https://github-readme-stats.vercel.app/api/pin/?username=raphaelbleier&repo=aau_smartgreenhouse&bg_color=0d1117&border_color=30363d&title_color=38bdf8&icon_color=38bdf8&text_color=a1a1aa" /></a>
+  <a href="https://github.com/raphaelbleier/SE2Einzelphase"><img src="https://github-readme-stats.vercel.app/api/pin/?username=raphaelbleier&repo=SE2Einzelphase&bg_color=0d1117&border_color=30363d&title_color=38bdf8&icon_color=38bdf8&text_color=a1a1aa" /></a>
+</p>
+<p align="center">
+  <a href="https://github.com/raphaelbleier/Local-Media-Wish-Management-App-React-Node"><img src="https://github-readme-stats.vercel.app/api/pin/?username=raphaelbleier&repo=Local-Media-Wish-Management-App-React-Node&bg_color=0d1117&border_color=30363d&title_color=38bdf8&icon_color=38bdf8&text_color=a1a1aa" /></a>
+</p>
 
 ---
 
