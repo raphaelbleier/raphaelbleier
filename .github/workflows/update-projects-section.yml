@@ -1,0 +1,86 @@
+name: Update Projects Section
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 6 * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  update-projects:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Update README projects section
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+
+            const owner = context.repo.owner;
+            const repo = context.repo.repo;
+            const readmePath = 'README.md';
+
+            const allRepos = await github.paginate(github.rest.repos.listForUser, {
+              username: owner,
+              type: 'public',
+              sort: 'pushed',
+              per_page: 100,
+            });
+
+            const filtered = allRepos
+              .filter(r => !r.archived)
+              .sort((a, b) => new Date(b.pushed_at) - new Date(a.pushed_at));
+
+            const rows = [];
+
+            for (let i = 0; i < filtered.length; i += 2) {
+              const pair = filtered.slice(i, i + 2);
+              rows.push('<p align="center">');
+
+              for (const r of pair) {
+                const cardUrl = `https://github-readme-stats-sigma-five.vercel.app/api/pin/?username=${owner}&repo=${encodeURIComponent(r.name)}&bg_color=0d1117&border_color=30363d&title_color=38bdf8&icon_color=38bdf8&text_color=a1a1aa`;
+                rows.push(`  <a href="${r.html_url}"><img src="${cardUrl}" /></a>`);
+              }
+
+              rows.push('</p>');
+            }
+
+            const generated = rows.join('\n');
+            const start = '<!--START_SECTION:projects-->';
+            const end = '<!--END_SECTION:projects-->';
+
+            const readme = fs.readFileSync(readmePath, 'utf8');
+            const pattern = new RegExp(`${start}[\\s\\S]*?${end}`, 'm');
+
+            if (!pattern.test(readme)) {
+              core.setFailed('Projects section markers were not found in README.md');
+              return;
+            }
+
+            const next = readme.replace(pattern, `${start}\n${generated}\n${end}`);
+
+            if (next === readme) {
+              core.info('No README changes needed.');
+              return;
+            }
+
+            fs.writeFileSync(readmePath, next, 'utf8');
+            core.info('README projects section updated.');
+
+      - name: Commit changes
+        run: |
+          if [[ -n "$(git status --porcelain README.md)" ]]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add README.md
+            git commit -m "chore: refresh projects section"
+            git push
+          else
+            echo "No changes to commit"
+          fi
