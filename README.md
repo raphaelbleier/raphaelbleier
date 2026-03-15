@@ -97,15 +97,23 @@ web apps, automation tools, browser extensions, and IoT projects.
 
 <!--START_SECTION:projects-->
 <p align="center">
-  <a href="https://github.com/raphaelbleier/SpotifyToWled"><img src="https://github-readme-stats-sigma-five.vercel.app/api/pin/?username=raphaelbleier&repo=SpotifyToWled&bg_color=0d1117&border_color=30363d&title_color=38bdf8&icon_color=38bdf8&text_color=a1a1aa" /></a>
-  <a href="https://github.com/raphaelbleier/geminibrowserextension"><img src="https://github-readme-stats-sigma-five.vercel.app/api/pin/?username=raphaelbleier&repo=geminibrowserextension&bg_color=0d1117&border_color=30363d&title_color=38bdf8&icon_color=38bdf8&text_color=a1a1aa" /></a>
+  <a href="https://github.com/raphaelbleier/powerpoint_karaoke"><img src="https://github-readme-stats-sigma-five.vercel.app/api/pin/?username=raphaelbleier&repo=powerpoint_karaoke&bg_color=0d1117&border_color=30363d&title_color=38bdf8&icon_color=38bdf8&text_color=a1a1aa" /></a>
+  <a href="https://github.com/raphaelbleier/raphaelbleier"><img src="https://github-readme-stats-sigma-five.vercel.app/api/pin/?username=raphaelbleier&repo=raphaelbleier&bg_color=0d1117&border_color=30363d&title_color=38bdf8&icon_color=38bdf8&text_color=a1a1aa" /></a>
 </p>
 <p align="center">
-  <a href="https://github.com/raphaelbleier/aau_smartgreenhouse"><img src="https://github-readme-stats-sigma-five.vercel.app/api/pin/?username=raphaelbleier&repo=aau_smartgreenhouse&bg_color=0d1117&border_color=30363d&title_color=38bdf8&icon_color=38bdf8&text_color=a1a1aa" /></a>
+  <a href="https://github.com/raphaelbleier/se_2"><img src="https://github-readme-stats-sigma-five.vercel.app/api/pin/?username=raphaelbleier&repo=se_2&bg_color=0d1117&border_color=30363d&title_color=38bdf8&icon_color=38bdf8&text_color=a1a1aa" /></a>
   <a href="https://github.com/raphaelbleier/SE2Einzelphase"><img src="https://github-readme-stats-sigma-five.vercel.app/api/pin/?username=raphaelbleier&repo=SE2Einzelphase&bg_color=0d1117&border_color=30363d&title_color=38bdf8&icon_color=38bdf8&text_color=a1a1aa" /></a>
 </p>
 <p align="center">
+  <a href="https://github.com/raphaelbleier/geminibrowserextension"><img src="https://github-readme-stats-sigma-five.vercel.app/api/pin/?username=raphaelbleier&repo=geminibrowserextension&bg_color=0d1117&border_color=30363d&title_color=38bdf8&icon_color=38bdf8&text_color=a1a1aa" /></a>
+  <a href="https://github.com/raphaelbleier/SpotifyToWled"><img src="https://github-readme-stats-sigma-five.vercel.app/api/pin/?username=raphaelbleier&repo=SpotifyToWled&bg_color=0d1117&border_color=30363d&title_color=38bdf8&icon_color=38bdf8&text_color=a1a1aa" /></a>
+</p>
+<p align="center">
+  <a href="https://github.com/raphaelbleier/aau_smartgreenhouse"><img src="https://github-readme-stats-sigma-five.vercel.app/api/pin/?username=raphaelbleier&repo=aau_smartgreenhouse&bg_color=0d1117&border_color=30363d&title_color=38bdf8&icon_color=38bdf8&text_color=a1a1aa" /></a>
   <a href="https://github.com/raphaelbleier/Local-Media-Wish-Management-App-React-Node"><img src="https://github-readme-stats-sigma-five.vercel.app/api/pin/?username=raphaelbleier&repo=Local-Media-Wish-Management-App-React-Node&bg_color=0d1117&border_color=30363d&title_color=38bdf8&icon_color=38bdf8&text_color=a1a1aa" /></a>
+</p>
+<p align="center">
+  <a href="https://github.com/raphaelbleier/react-resume"><img src="https://github-readme-stats-sigma-five.vercel.app/api/pin/?username=raphaelbleier&repo=react-resume&bg_color=0d1117&border_color=30363d&title_color=38bdf8&icon_color=38bdf8&text_color=a1a1aa" /></a>
 </p>
 <!--END_SECTION:projects-->
 
