@@ -97,8 +97,8 @@ web apps, automation tools, browser extensions, and IoT projects.
 
 <!--START_SECTION:projects-->
 <p align="center">
-  <a href="https://github.com/raphaelbleier/dataiku-ai-context"><img src="https://github-readme-stats-sigma-five.vercel.app/api/pin/?username=raphaelbleier&repo=dataiku-ai-context&bg_color=0d1117&border_color=30363d&title_color=38bdf8&icon_color=38bdf8&text_color=a1a1aa" /></a>
   <a href="https://github.com/raphaelbleier/raphaelbleier"><img src="https://github-readme-stats-sigma-five.vercel.app/api/pin/?username=raphaelbleier&repo=raphaelbleier&bg_color=0d1117&border_color=30363d&title_color=38bdf8&icon_color=38bdf8&text_color=a1a1aa" /></a>
+  <a href="https://github.com/raphaelbleier/dataiku-ai-context"><img src="https://github-readme-stats-sigma-five.vercel.app/api/pin/?username=raphaelbleier&repo=dataiku-ai-context&bg_color=0d1117&border_color=30363d&title_color=38bdf8&icon_color=38bdf8&text_color=a1a1aa" /></a>
 </p>
 <p align="center">
   <a href="https://github.com/raphaelbleier/powerpoint_karaoke"><img src="https://github-readme-stats-sigma-five.vercel.app/api/pin/?username=raphaelbleier&repo=powerpoint_karaoke&bg_color=0d1117&border_color=30363d&title_color=38bdf8&icon_color=38bdf8&text_color=a1a1aa" /></a>
