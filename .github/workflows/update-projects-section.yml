@@ -34,24 +34,30 @@ jobs:
             });
 
             const filtered = allRepos
-              .filter(r => !r.archived)
-              .sort((a, b) => new Date(b.pushed_at) - new Date(a.pushed_at));
+              .filter(r => !r.archived && r.name !== owner)
+              .sort((a, b) => new Date(b.pushed_at) - new Date(a.pushed_at))
+              .slice(0, 6);
 
-            const rows = [];
+            const tableRows = ['<table align="center">'];
 
             for (let i = 0; i < filtered.length; i += 2) {
               const pair = filtered.slice(i, i + 2);
-              rows.push('<p align="center">');
+              tableRows.push('<tr>');
 
               for (const r of pair) {
                 const cardUrl = `https://github-readme-stats-sigma-five.vercel.app/api/pin/?username=${owner}&repo=${encodeURIComponent(r.name)}&bg_color=0d1117&border_color=30363d&title_color=38bdf8&icon_color=38bdf8&text_color=a1a1aa`;
-                rows.push(`  <a href="${r.html_url}"><img src="${cardUrl}" /></a>`);
+                tableRows.push(`<td align="center" width="50%"><a href="${r.html_url}"><img src="${cardUrl}" /></a></td>`);
               }
 
-              rows.push('</p>');
+              if (pair.length === 1) {
+                tableRows.push('<td width="50%"></td>');
+              }
+
+              tableRows.push('</tr>');
             }
 
-            const generated = rows.join('\n');
+            tableRows.push('</table>');
+            const generated = tableRows.join('\n');
             const start = '<!--START_SECTION:projects-->';
             const end = '<!--END_SECTION:projects-->';
 
