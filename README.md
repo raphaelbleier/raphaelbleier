@@ -98,12 +98,12 @@ I build LLM-powered applications, agent workflows, and developer tools.
 <td align="center" width="50%"><a href="https://github.com/raphaelbleier/dataiku-ai-context"><img src="https://github-readme-stats-sigma-five.vercel.app/api/pin/?username=raphaelbleier&repo=dataiku-ai-context&bg_color=0d1117&border_color=30363d&title_color=38bdf8&icon_color=38bdf8&text_color=a1a1aa" /></a></td>
 </tr>
 <tr>
-<td align="center" width="50%"><a href="https://github.com/raphaelbleier/geminibrowserextension"><img src="https://github-readme-stats-sigma-five.vercel.app/api/pin/?username=raphaelbleier&repo=geminibrowserextension&bg_color=0d1117&border_color=30363d&title_color=38bdf8&icon_color=38bdf8&text_color=a1a1aa" /></a></td>
-<td align="center" width="50%"><a href="https://github.com/raphaelbleier/SpotifyToWled"><img src="https://github-readme-stats-sigma-five.vercel.app/api/pin/?username=raphaelbleier&repo=SpotifyToWled&bg_color=0d1117&border_color=30363d&title_color=38bdf8&icon_color=38bdf8&text_color=a1a1aa" /></a></td>
+<td align="center" width="50%"><a href="https://github.com/raphaelbleier/powerpoint_karaoke"><img src="https://github-readme-stats-sigma-five.vercel.app/api/pin/?username=raphaelbleier&repo=powerpoint_karaoke&bg_color=0d1117&border_color=30363d&title_color=38bdf8&icon_color=38bdf8&text_color=a1a1aa" /></a></td>
+<td align="center" width="50%"><a href="https://github.com/raphaelbleier/se_2"><img src="https://github-readme-stats-sigma-five.vercel.app/api/pin/?username=raphaelbleier&repo=se_2&bg_color=0d1117&border_color=30363d&title_color=38bdf8&icon_color=38bdf8&text_color=a1a1aa" /></a></td>
 </tr>
 <tr>
-<td align="center" width="50%"><a href="https://github.com/raphaelbleier/powerpoint_karaoke"><img src="https://github-readme-stats-sigma-five.vercel.app/api/pin/?username=raphaelbleier&repo=powerpoint_karaoke&bg_color=0d1117&border_color=30363d&title_color=38bdf8&icon_color=38bdf8&text_color=a1a1aa" /></a></td>
-<td align="center" width="50%"><a href="https://github.com/raphaelbleier/react-resume"><img src="https://github-readme-stats-sigma-five.vercel.app/api/pin/?username=raphaelbleier&repo=react-resume&bg_color=0d1117&border_color=30363d&title_color=38bdf8&icon_color=38bdf8&text_color=a1a1aa" /></a></td>
+<td align="center" width="50%"><a href="https://github.com/raphaelbleier/SE2Einzelphase"><img src="https://github-readme-stats-sigma-five.vercel.app/api/pin/?username=raphaelbleier&repo=SE2Einzelphase&bg_color=0d1117&border_color=30363d&title_color=38bdf8&icon_color=38bdf8&text_color=a1a1aa" /></a></td>
+<td align="center" width="50%"><a href="https://github.com/raphaelbleier/geminibrowserextension"><img src="https://github-readme-stats-sigma-five.vercel.app/api/pin/?username=raphaelbleier&repo=geminibrowserextension&bg_color=0d1117&border_color=30363d&title_color=38bdf8&icon_color=38bdf8&text_color=a1a1aa" /></a></td>
 </tr>
 </table>
 <!--END_SECTION:projects-->
