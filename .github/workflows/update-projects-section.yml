@@ -1,92 +1,82 @@
-name: Update Projects Section
+name: Refresh Profile Data
 
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 6 * * *"
+    - cron: '0 6 * * *'
 
 permissions:
   contents: write
 
 jobs:
-  update-projects:
+  refresh-profile-data:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Update README projects section
-        uses: actions/github-script@v7
+      - uses: actions/checkout@v4
+      - uses: actions/github-script@v7
         with:
           script: |
             const fs = require('fs');
-
             const owner = context.repo.owner;
-            const repo = context.repo.repo;
-            const readmePath = 'README.md';
+            const escapeXml = value => String(value).replace(/[<>&'\"]/g, char => ({ '<': '&lt;', '>': '&gt;', '&': '&amp;', "'": '&apos;', '"': '&quot;' }[char]));
 
-            const allRepos = await github.paginate(github.rest.repos.listForUser, {
-              username: owner,
-              type: 'public',
-              sort: 'pushed',
-              per_page: 100,
-            });
+            const [user, contributionData, allRepos] = await Promise.all([
+              github.rest.users.getByUsername({ username: owner }),
+              github.graphql(`
+                query($login: String!) {
+                  user(login: $login) {
+                    contributionsCollection {
+                      contributionCalendar {
+                        totalContributions
+                        weeks { contributionDays { date contributionCount } }
+                      }
+                    }
+                  }
+                }
+              `, { login: owner }),
+              github.paginate(github.rest.repos.listForUser, {
+                username: owner, type: 'public', sort: 'pushed', per_page: 100,
+              }),
+            ]);
 
-            const filtered = allRepos
-              .filter(r => !r.archived && r.name !== owner)
-              .sort((a, b) => new Date(b.pushed_at) - new Date(a.pushed_at))
-              .slice(0, 6);
-
-            const tableRows = ['<table align="center">'];
-
-            for (let i = 0; i < filtered.length; i += 2) {
-              const pair = filtered.slice(i, i + 2);
-              tableRows.push('<tr>');
-
-              for (const r of pair) {
-                const cardUrl = `https://github-readme-stats-sigma-five.vercel.app/api/pin/?username=${owner}&repo=${encodeURIComponent(r.name)}&bg_color=0d1117&border_color=30363d&title_color=38bdf8&icon_color=38bdf8&text_color=a1a1aa`;
-                tableRows.push(`<td align="center" width="50%"><a href="${r.html_url}"><img src="${cardUrl}" /></a></td>`);
-              }
-
-              if (pair.length === 1) {
-                tableRows.push('<td width="50%"></td>');
-              }
-
-              tableRows.push('</tr>');
+            const calendar = contributionData.user.contributionsCollection.contributionCalendar;
+            const days = calendar.weeks.flatMap(week => week.contributionDays);
+            let currentStreak = 0;
+            for (const day of [...days].reverse()) {
+              if (!day.contributionCount) break;
+              currentStreak += 1;
+            }
+            let longestStreak = 0, activeStreak = 0;
+            for (const day of days) {
+              activeStreak = day.contributionCount ? activeStreak + 1 : 0;
+              longestStreak = Math.max(longestStreak, activeStreak);
             }
 
-            tableRows.push('</table>');
-            const generated = tableRows.join('\n');
+            const statsSvg = `<svg xmlns="http://www.w3.org/2000/svg" width="860" height="180" viewBox="0 0 860 180" role="img" aria-label="GitHub statistics"><rect width="100%" height="100%" rx="8" fill="#0d1117"/><rect x="1" y="1" width="858" height="178" rx="7" fill="none" stroke="#30363d"/><text x="28" y="36" fill="#38bdf8" font-family="ui-monospace, monospace" font-size="15">raphael@github:~$ ./stats.sh</text><line x1="286" y1="58" x2="286" y2="150" stroke="#30363d"/><line x1="573" y1="58" x2="573" y2="150" stroke="#30363d"/><text x="143" y="104" text-anchor="middle" fill="#f0f6fc" font-family="ui-monospace, monospace" font-size="38" font-weight="700">${calendar.totalContributions}</text><text x="143" y="132" text-anchor="middle" fill="#8b949e" font-family="ui-monospace, monospace" font-size="13">CONTRIBUTIONS / YEAR</text><text x="430" y="104" text-anchor="middle" fill="#f0f6fc" font-family="ui-monospace, monospace" font-size="38" font-weight="700">${currentStreak}</text><text x="430" y="132" text-anchor="middle" fill="#8b949e" font-family="ui-monospace, monospace" font-size="13">CURRENT STREAK</text><text x="716" y="104" text-anchor="middle" fill="#f0f6fc" font-family="ui-monospace, monospace" font-size="38" font-weight="700">${longestStreak}</text><text x="716" y="132" text-anchor="middle" fill="#8b949e" font-family="ui-monospace, monospace" font-size="13">LONGEST STREAK</text></svg>`;
+            fs.writeFileSync('assets/github-stats.svg', statsSvg);
+
+            const projects = allRepos
+              .filter(repo => !repo.archived && repo.name !== owner)
+              .sort((a, b) => new Date(b.pushed_at) - new Date(a.pushed_at))
+              .slice(0, 6);
+            const projectLines = projects.map(repo =>
+              `- [\`${escapeXml(repo.name)}\`](${repo.html_url})${repo.description ? ` — ${escapeXml(repo.description)}` : ''}`
+            ).join('\n');
             const start = '<!--START_SECTION:projects-->';
             const end = '<!--END_SECTION:projects-->';
-
-            const readme = fs.readFileSync(readmePath, 'utf8');
+            const readme = fs.readFileSync('README.md', 'utf8');
             const pattern = new RegExp(`${start}[\\s\\S]*?${end}`, 'm');
-
             if (!pattern.test(readme)) {
               core.setFailed('Projects section markers were not found in README.md');
               return;
             }
-
-            const next = readme.replace(pattern, `${start}\n${generated}\n${end}`);
-
-            if (next === readme) {
-              core.info('No README changes needed.');
-              return;
-            }
-
-            fs.writeFileSync(readmePath, next, 'utf8');
-            core.info('README projects section updated.');
-
+            fs.writeFileSync('README.md', readme.replace(pattern, `${start}\n${projectLines}\n${end}`));
       - name: Commit changes
         run: |
-          if [[ -n "$(git status --porcelain README.md)" ]]; then
+          if [[ -n "$(git status --porcelain README.md assets/github-stats.svg)" ]]; then
             git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add README.md
-            git commit -m "chore: refresh projects section"
+            git add README.md assets/github-stats.svg
+            git commit -m "chore: refresh profile data"
             git push
-          else
-            echo "No changes to commit"
           fi

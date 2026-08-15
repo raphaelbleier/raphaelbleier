@@ -62,8 +62,7 @@ I build LLM-powered applications, agent workflows, and developer tools — from 
 
 <div align="center">
 
-<img height="170" src="https://github-readme-stats-sigma-five.vercel.app/api?username=raphaelbleier&show_icons=true&bg_color=0d1117&border_color=30363d&title_color=38bdf8&icon_color=38bdf8&text_color=a1a1aa&ring_color=38bdf8&include_all_commits=true&count_private=true&rank_icon=github" alt="GitHub statistics" />
-<img height="170" src="https://streak-stats.demolab.com/?user=raphaelbleier&theme=github-dark-blue&background=0d1117&border=30363d&stroke=30363d&ring=38bdf8&fire=38bdf8&currStreakNum=ffffff&sideNums=ffffff&currStreakLabel=38bdf8&sideLabels=a1a1aa&dates=a1a1aa" alt="GitHub contribution streak" />
+<img src="./assets/github-stats.svg" width="860" alt="GitHub statistics" />
 
 </div>
 
