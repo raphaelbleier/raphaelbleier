@@ -2,7 +2,7 @@
 
 <table>
 <tr>
-<td valign="top"><img src="./assets/raphael-ascii.svg" width="300" alt="ASCII portrait of Raphael Bleier" /></td>
+<td valign="top"><img src="https://github.com/raphaelbleier.png" width="260" alt="Portrait of Raphael Bleier" /></td>
 <td valign="middle"><img src="./assets/rb-wordmark.svg" width="470" alt="RB terminal wordmark" /></td>
 </tr>
 </table>
