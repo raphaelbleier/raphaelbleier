@@ -15,13 +15,16 @@ if (!dimensions || input.subarray(0, 2).toString() !== 'P5') {
 const headerEnd = dimensions[0].length;
 const [, width, height] = dimensions.map(Number);
 const pixels = input.subarray(headerEnd);
-const ramp = ' .,:;irsXA253hMHGS#9B&@';
+const ramp = ' .:-=+*#%@';
 const fontSize = 7;
 const lineHeight = 7.8;
 const margin = 14;
 
 const rows = Array.from({ length: height }, (_, y) => {
-  const text = Array.from({ length: width }, (_, x) => ramp[Math.round((pixels[y * width + x] / 255) * (ramp.length - 1))]).join('');
+  const text = Array.from({ length: width }, (_, x) => {
+    const luminance = Math.max(0, Math.min(1, (pixels[y * width + x] - 75) / 120));
+    return ramp[Math.round(luminance * (ramp.length - 1))];
+  }).join('');
   return `<text x="${margin}" y="${margin + (y + 1) * lineHeight}" fill="#e6edf3">${text}</text>`;
 }).join('');
 
