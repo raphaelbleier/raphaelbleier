@@ -71,20 +71,12 @@ I build LLM-powered applications, agent workflows, and developer tools — from 
 ### `raphael@github:~$ ls ./projects`
 
 <!--START_SECTION:projects-->
-<table align="center">
-<tr>
-<td align="center" width="50%"><a href="https://github.com/raphaelbleier/rudarr_android"><img src="https://github-readme-stats-sigma-five.vercel.app/api/pin/?username=raphaelbleier&repo=rudarr_android&bg_color=0d1117&border_color=30363d&title_color=38bdf8&icon_color=38bdf8&text_color=a1a1aa" alt="rudarr_android" /></a></td>
-<td align="center" width="50%"><a href="https://github.com/raphaelbleier/userstory-playwright-skill"><img src="https://github-readme-stats-sigma-five.vercel.app/api/pin/?username=raphaelbleier&repo=userstory-playwright-skill&bg_color=0d1117&border_color=30363d&title_color=38bdf8&icon_color=38bdf8&text_color=a1a1aa" alt="userstory-playwright-skill" /></a></td>
-</tr>
-<tr>
-<td align="center" width="50%"><a href="https://github.com/raphaelbleier/ccusage-panel"><img src="https://github-readme-stats-sigma-five.vercel.app/api/pin/?username=raphaelbleier&repo=ccusage-panel&bg_color=0d1117&border_color=30363d&title_color=38bdf8&icon_color=38bdf8&text_color=a1a1aa" alt="ccusage-panel" /></a></td>
-<td align="center" width="50%"><a href="https://github.com/raphaelbleier/dataiku-ai-context"><img src="https://github-readme-stats-sigma-five.vercel.app/api/pin/?username=raphaelbleier&repo=dataiku-ai-context&bg_color=0d1117&border_color=30363d&title_color=38bdf8&icon_color=38bdf8&text_color=a1a1aa" alt="dataiku-ai-context" /></a></td>
-</tr>
-<tr>
-<td align="center" width="50%"><a href="https://github.com/raphaelbleier/powerpoint_karaoke"><img src="https://github-readme-stats-sigma-five.vercel.app/api/pin/?username=raphaelbleier&repo=powerpoint_karaoke&bg_color=0d1117&border_color=30363d&title_color=38bdf8&icon_color=38bdf8&text_color=a1a1aa" alt="powerpoint_karaoke" /></a></td>
-<td align="center" width="50%"><a href="https://github.com/raphaelbleier/security-lab-aau-ss26-rubber-ducky"><img src="https://github-readme-stats-sigma-five.vercel.app/api/pin/?username=raphaelbleier&repo=security-lab-aau-ss26-rubber-ducky&bg_color=0d1117&border_color=30363d&title_color=38bdf8&icon_color=38bdf8&text_color=a1a1aa" alt="security-lab-aau-ss26-rubber-ducky" /></a></td>
-</tr>
-</table>
+- [`rudarr_android`](https://github.com/raphaelbleier/rudarr_android) — A android Kotlin companion app for Radarr and Sonarr instances.
+- [`userstory-playwright-skill`](https://github.com/raphaelbleier/userstory-playwright-skill) — Point your coding agent at a website codebase: it writes user stories into Excel, tests them with Playwright, and writes the bugs back. Works with Claude Code, Codex, Kilo Code, OpenCode and GitHub Copilot CLI.
+- [`ccusage-panel`](https://github.com/raphaelbleier/ccusage-panel) — GNOME Shell top bar indicator for Claude Code and Codex usage powered by ccusage
+- [`security-lab-aau-ss26-rubber-ducky`](https://github.com/raphaelbleier/security-lab-aau-ss26-rubber-ducky) — System Security Lab SS2026 – AAU Klagenfurt | W02a Rubber Ducky Payloads &amp; Documentation
+- [`dataiku-ai-context`](https://github.com/raphaelbleier/dataiku-ai-context) — Dataiku DSS documentation bundles + Claude Code subagents for every major AI coding tool
+- [`powerpoint_karaoke`](https://github.com/raphaelbleier/powerpoint_karaoke) — Present or Panic is a multiplayer PowerPoint Karaoke web app for local parties, workshops, and chaotic presentation nights.
 <!--END_SECTION:projects-->
 
 ---
