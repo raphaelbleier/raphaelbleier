@@ -1,0 +1,50 @@
+name: Update Contribution Heatmap
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '15 5 * * *'
+
+permissions:
+  contents: write
+
+jobs:
+  update-heatmap:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const login = context.repo.owner;
+            const data = await github.graphql(`
+              query($login: String!) {
+                user(login: $login) {
+                  contributionsCollection {
+                    contributionCalendar {
+                      totalContributions
+                      weeks { contributionDays { color date contributionCount } }
+                    }
+                  }
+                }
+              }
+            `, { login });
+            const calendar = data.user.contributionsCollection.contributionCalendar;
+            const size = 11, gap = 3, left = 34, top = 38;
+            const weeks = calendar.weeks.slice(-53);
+            const cells = weeks.flatMap((week, x) => week.contributionDays.map((day, y) =>
+              `<rect x="${left + x * (size + gap)}" y="${top + y * (size + gap)}" width="${size}" height="${size}" rx="2" fill="${day.contributionCount ? '#38bdf8' : '#21262d'}"><title>${day.date}: ${day.contributionCount} contributions</title></rect>`
+            )).join('');
+            const width = left + weeks.length * (size + gap) + 12;
+            const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="160" viewBox="0 0 ${width} 160" role="img" aria-label="${calendar.totalContributions} GitHub contributions in the last year"><rect width="100%" height="100%" rx="6" fill="#0d1117"/><text x="18" y="23" fill="#e6edf3" font-family="ui-monospace, monospace" font-size="13">raphael@github:~$ ./contributions.sh</text><text x="18" y="145" fill="#8b949e" font-family="ui-monospace, monospace" font-size="11">${calendar.totalContributions} contributions in the last year</text>${cells}</svg>`;
+            fs.writeFileSync('assets/contribution-heatmap.svg', svg);
+      - name: Commit changes
+        run: |
+          if [[ -n "$(git status --porcelain assets/contribution-heatmap.svg)" ]]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add assets/contribution-heatmap.svg
+            git commit -m "chore: refresh contribution heatmap"
+            git push
+          fi
