@@ -29,11 +29,13 @@ const rows = Array.from({ length: height }, (_, y) => {
 }).join('');
 
 const svgWidth = width * 4.25 + margin * 2;
-const svgHeight = height * lineHeight + margin * 2;
+const portraitHeight = height * lineHeight;
+const scaleY = (svgWidth - margin * 2) / portraitHeight;
+const svgHeight = svgWidth;
 const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${svgWidth}" height="${svgHeight}" viewBox="0 0 ${svgWidth} ${svgHeight}" role="img" aria-label="ASCII portrait of Raphael Bleier">
   <rect width="100%" height="100%" fill="#0d1117"/>
   <rect x="5" y="5" width="${svgWidth - 10}" height="${svgHeight - 10}" fill="none" stroke="#38bdf8" stroke-width="1"/>
-  <g font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="${fontSize}" xml:space="preserve">${rows}</g>
+  <g transform="scale(1 ${scaleY})" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="${fontSize}" xml:space="preserve">${rows}</g>
   <text x="14" y="${svgHeight - 11}" fill="#38bdf8" font-family="ui-monospace, monospace" font-size="8">raphael@github:~$</text>
 </svg>`;
 
