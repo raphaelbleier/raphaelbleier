@@ -71,12 +71,12 @@ I build LLM-powered applications, agent workflows, and developer tools — from 
 ### `raphael@github:~$ ls ./projects`
 
 <!--START_SECTION:projects-->
+- [`CL4R1T4S`](https://github.com/raphaelbleier/CL4R1T4S) — LEAKED SYSTEM PROMPTS FOR CHATGPT, CLAUDE, GEMINI, GROK, PERPLEXITY, CURSOR, LOVABLE, REPLIT, AND MORE! - AI SYSTEMS TRANSPARENCY FOR ALL! 👐
 - [`rudarr_android`](https://github.com/raphaelbleier/rudarr_android) — A android Kotlin companion app for Radarr and Sonarr instances.
 - [`userstory-playwright-skill`](https://github.com/raphaelbleier/userstory-playwright-skill) — Point your coding agent at a website codebase: it writes user stories into Excel, tests them with Playwright, and writes the bugs back. Works with Claude Code, Codex, Kilo Code, OpenCode and GitHub Copilot CLI.
 - [`ccusage-panel`](https://github.com/raphaelbleier/ccusage-panel) — GNOME Shell top bar indicator for Claude Code and Codex usage powered by ccusage
 - [`security-lab-aau-ss26-rubber-ducky`](https://github.com/raphaelbleier/security-lab-aau-ss26-rubber-ducky) — System Security Lab SS2026 – AAU Klagenfurt | W02a Rubber Ducky Payloads &amp; Documentation
 - [`dataiku-ai-context`](https://github.com/raphaelbleier/dataiku-ai-context) — Dataiku DSS documentation bundles + Claude Code subagents for every major AI coding tool
-- [`powerpoint_karaoke`](https://github.com/raphaelbleier/powerpoint_karaoke) — Present or Panic is a multiplayer PowerPoint Karaoke web app for local parties, workshops, and chaotic presentation nights.
 <!--END_SECTION:projects-->
 
 ---
