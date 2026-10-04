@@ -1,0 +1,57 @@
+{
+  "user": "raphaelbleier",
+  "host": "bleier",
+  "info": [
+    ["OS", "Applied CS @ AAU Klagenfurt"],
+    ["Host", "Bleier Solutions"],
+    ["Role", "AI Engineer · Full-Stack"],
+    ["Shell", "Claude Code + MCP"],
+    ["Langs", "TypeScript, Python, Kotlin, Rust"]
+  ],
+  "now": [
+    ["building", "Bleier Solutions: AI tools for small businesses in Carinthia"],
+    ["building", "Klarwerk, AI-native admin software for cleaning companies"],
+    ["hacking", "notchi, a Dynamic Island for KDE Plasma 6"],
+    ["learning", "Rust (Tauri) and multi-agent systems on AWS"],
+    ["open to", "freelance AI integrations, agent tooling collabs"],
+    ["ask me", "Claude Code setups, MCP servers, Playwright testing, Proxmox homelabs"],
+    ["speaks", "German, English"]
+  ],
+  "focus": [
+    ["bleier-solutions", 38.0],
+    ["claude-code --agents", 27.5],
+    ["aau-applied-cs", 18.0],
+    ["homelab --nodes=3", 11.0],
+    ["side-quests", 5.5]
+  ],
+  "scores": [
+    { "repo": "userstory-playwright-skill", "desc": "stories -> playwright -> bugs back in excel", "lang": "JS" },
+    { "repo": "ccusage-panel", "desc": "claude code + codex usage in gnome top bar", "lang": "JS" },
+    { "repo": "dataiku-ai-context", "desc": "dss docs + subagents for ai coding tools", "lang": "PY" },
+    { "repo": "rudarr_android", "desc": "radarr + sonarr companion app", "lang": "KT" }
+  ],
+  "achievements": [
+    { "title": "FOUNDER", "text": "Started Bleier Solutions", "state": "2026-08-24", "gold": true },
+    { "title": "COMBO x{contributions}", "text": "Contributions in one year", "state": "UNLOCKED", "gold": true },
+    { "title": "COLLECTOR", "text": "{repos} repositories created", "state": "UNLOCKED" },
+    { "title": "POLYGLOT", "text": "{languages} languages in repos", "state": "UNLOCKED" },
+    { "title": "SECURITY LAB", "text": "Rubber Ducky payloads, AAU SS26", "state": "CLEARED" },
+    { "title": "SYSADMIN", "text": "3-node Proxmox homelab", "state": "ONLINE" },
+    { "title": "MULTI-AGENT", "text": "Skill runs in 5 coding agents", "state": "UNLOCKED" },
+    { "title": "BOSS FIGHT", "text": "Bachelor thesis", "state": "IN PROGRESS", "boss": true }
+  ],
+  "stack": [
+    ["ai", "claude-api · mcp · openai · agent-sdk · graphrag"],
+    ["web", "typescript · next.js · react · fastapi · tauri"],
+    ["mobile", "kotlin · swift · flutter"],
+    ["infra", "proxmox · docker · cloudflare · aws · linux"],
+    ["test", "playwright · pytest"]
+  ],
+  "contact": [
+    ["web", "raphael.bleier.uk", "https://raphael.bleier.uk"],
+    ["company", "Bleier Solutions", "https://bleier-solutions.com"],
+    ["mail", "contact@bleier.uk", "mailto:contact@bleier.uk"],
+    ["office", "office@bleier-solutions.com", "mailto:office@bleier-solutions.com"],
+    ["linkedin", "in/raphael-bleier", "https://www.linkedin.com/in/raphael-bleier"]
+  ]
+}

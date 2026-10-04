@@ -1,0 +1,38 @@
+name: Build Profile
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '15 5 * * *'
+  push:
+    branches: [main]
+    paths: ['profile.json', 'scripts/**', 'assets/portrait.json']
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: Platane/snk/svg-only@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: dist/snake.svg?color_snake=#fab387&color_dots=#262637,#3b5a3a,#55834f,#7fb878,#a6e3a1
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      # PROFILE_TOKEN (optional, read-only PAT) lets the stats include private repos
+      - run: node scripts/build.mjs
+        env:
+          GH_TOKEN: ${{ secrets.PROFILE_TOKEN || github.token }}
+      - name: Commit changes
+        run: |
+          if [[ -n "$(git status --porcelain README.md assets/terminal)" ]]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add README.md assets/terminal
+            git commit -m "chore: refresh profile"
+            git push
+          fi
