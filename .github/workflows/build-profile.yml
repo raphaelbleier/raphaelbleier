@@ -23,10 +23,9 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-      # PROFILE_TOKEN (optional, read-only PAT) lets the stats include private repos
       - run: node scripts/build.mjs
         env:
-          GH_TOKEN: ${{ secrets.PROFILE_TOKEN || github.token }}
+          GH_TOKEN: ${{ github.token }}
       - name: Commit changes
         run: |
           if [[ -n "$(git status --porcelain README.md assets/terminal)" ]]; then
